@@ -112,7 +112,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="xl"
-                className="text-white border-white/30 hover:bg-white/10"
+                className="text-white border-white/70 bg-white/10 hover:bg-white/20 hover:border-white"
                 onClick={() => navigate("/courses")}
               >
                 <BookOpen className="h-5 w-5 mr-2" />
