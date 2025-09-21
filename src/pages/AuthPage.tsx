@@ -6,10 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BookOpen, Users, TreePine, ArrowLeft, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroImage from "@/assets/hero-village-learning.jpg";
 
 const AuthPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [authMode, setAuthMode] = useState<"login" | "signup">("login");
   const [userRole, setUserRole] = useState<"student" | "teacher" | null>(null);
 
@@ -21,16 +24,17 @@ const AuthPage = () => {
   if (!userRole) {
     return (
       <div className="min-h-screen bg-gradient-hero flex flex-col relative p-4">
-        {/* Back to Home Button - More Prominent */}
-        <div className="w-full max-w-7xl mx-auto">
+        {/* Top Navigation */}
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between mb-4">
           <Button
             variant="secondary"
-            className="mb-4 shadow-soft"
+            className="shadow-soft"
             onClick={() => navigate("/")}
           >
             <Home className="h-4 w-4 mr-2" />
-            ← Back to Home
+            ← {t('nav.home')}
           </Button>
+          <LanguageSwitcher />
         </div>
 
         <div className="flex-1 flex items-center justify-center">
@@ -42,12 +46,12 @@ const AuthPage = () => {
                 <h1 className="text-4xl md:text-6xl font-bold text-white">
                   नभा
                   <span className="block text-xl md:text-2xl font-normal opacity-90">
-                    Nabha - Rural Learning Platform
+                    {t('hero.title')}
                   </span>
                 </h1>
               </div>
               <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-                Empowering rural education through AI-driven learning. Join thousands of students and teachers building a brighter future.
+                {t('hero.description')}
               </p>
             </div>
 
@@ -61,7 +65,7 @@ const AuthPage = () => {
                   <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
                     <BookOpen className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-2xl text-primary">I'm a Student</CardTitle>
+                  <CardTitle className="text-2xl text-primary">{t('dashboard.student.title')}</CardTitle>
                   <CardDescription className="text-base">
                     Access courses, take quizzes, and learn with AI assistance
                   </CardDescription>
@@ -76,7 +80,7 @@ const AuthPage = () => {
                   <div className="w-16 h-16 bg-gradient-warm rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-2xl text-secondary">I'm a Teacher</CardTitle>
+                  <CardTitle className="text-2xl text-secondary">{t('dashboard.teacher.title')}</CardTitle>
                   <CardDescription className="text-base">
                     Manage courses, track progress, and support students
                   </CardDescription>
@@ -90,16 +94,19 @@ const AuthPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
-      {/* Back to Home Button */}
-      <Button
-        variant="ghost"
-        className="absolute top-4 left-4 text-white hover:bg-white/20"
-        onClick={() => navigate("/")}
-      >
-        <Home className="h-4 w-4 mr-2" />
-        Back to Home
-      </Button>
+    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4 relative">
+      {/* Top Navigation */}
+      <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+        <Button
+          variant="ghost"
+          className="text-white hover:bg-white/20"
+          onClick={() => navigate("/")}
+        >
+          <Home className="h-4 w-4 mr-2" />
+          {t('nav.home')}
+        </Button>
+        <LanguageSwitcher />
+      </div>
 
       <div className="w-full max-w-md">
         <Card className="bg-card/95 backdrop-blur-sm border-none shadow-glow">
@@ -118,7 +125,7 @@ const AuthPage = () => {
             </div>
             <h2 className="text-2xl font-bold">नभा Nabha</h2>
             <CardTitle className="text-xl">
-              {userRole === "student" ? "Student Login" : "Teacher Login"}
+              {userRole === "student" ? t('auth.login.title') + " - Student" : t('auth.login.title') + " - Teacher"}
             </CardTitle>
             <CardDescription>
               Welcome back! Enter your credentials to continue

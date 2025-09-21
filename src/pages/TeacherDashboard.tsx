@@ -5,9 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Users, BookOpen, BarChart3, Settings, LogOut, TreePine, MessageCircle, Plus, TrendingUp, Clock, CheckCircle } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const TeacherDashboard = () => {
   const [showChatBot, setShowChatBot] = useState(false);
+  const { t } = useTranslation();
   
   const teacherData = {
     name: "Dr. Sunita Devi",
@@ -69,11 +72,14 @@ const TeacherDashboard = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <TreePine className="h-8 w-8" />
-            <h1 className="text-2xl font-bold">नभा Nabha - Teacher Portal</h1>
+            <h1 className="text-2xl font-bold">नभा Nabha - {t('dashboard.teacher.title')}</h1>
           </div>
           <div className="flex items-center gap-4">
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
             <div className="text-right hidden sm:block">
-              <p className="text-sm opacity-90">Welcome back,</p>
+              <p className="text-sm opacity-90">{t('dashboard.welcome')},</p>
               <p className="font-semibold">{teacherData.name}</p>
             </div>
             <div className="text-2xl">{teacherData.avatar}</div>

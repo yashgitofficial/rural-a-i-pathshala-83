@@ -6,9 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BookOpen, Clock, Users, Star, Search, Filter, ArrowLeft, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const CoursesPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedLevel, setSelectedLevel] = useState("all");
@@ -142,14 +145,17 @@ const CoursesPage = () => {
       {/* Header */}
       <header className="bg-primary text-primary-foreground p-4 shadow-soft">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-4">
-            <Button variant="ghost" size="icon" onClick={() => navigate(-1)} className="text-primary-foreground hover:bg-primary-foreground/20">
-              <ArrowLeft className="h-5 w-5" />
-            </Button>
-            <div>
-              <h1 className="text-2xl font-bold">Browse Courses</h1>
-              <p className="opacity-90">Discover knowledge that empowers rural communities</p>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" size="icon" onClick={() => navigate(-1)} className="text-primary-foreground hover:bg-primary-foreground/20">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+              <div>
+                <h1 className="text-2xl font-bold">{t('courses.title')}</h1>
+                <p className="opacity-90">Discover knowledge that empowers rural communities</p>
+              </div>
             </div>
+            <LanguageSwitcher />
           </div>
 
           {/* Search and Filters */}

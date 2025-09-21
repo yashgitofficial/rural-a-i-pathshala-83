@@ -5,9 +5,12 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, Clock } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const StudentDashboard = () => {
   const [showChatBot, setShowChatBot] = useState(false);
+  const { t } = useTranslation();
   
   const studentData = {
     name: "Priya Sharma",
@@ -65,8 +68,11 @@ const StudentDashboard = () => {
             <h1 className="text-2xl font-bold">नभा Nabha</h1>
           </div>
           <div className="flex items-center gap-4">
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
             <div className="text-right hidden sm:block">
-              <p className="text-sm opacity-90">Welcome back,</p>
+              <p className="text-sm opacity-90">{t('dashboard.welcome')},</p>
               <p className="font-semibold">{studentData.name}</p>
             </div>
             <div className="text-2xl">{studentData.avatar}</div>

@@ -108,22 +108,22 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
-                variant="secondary" 
+                variant="default" 
                 size="xl" 
                 onClick={() => navigate("/auth")}
-                className="shadow-glow"
+                className="bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-xl border border-white/20 transition-all duration-300 px-8 py-4 text-lg font-medium rounded-full"
               >
                 <Play className="h-5 w-5 mr-2" />
-                {t('hero.get_started')}
+                {t('auth.login.submit')} - Student
               </Button>
               <Button 
                 variant="outline" 
                 size="xl"
-                className="text-white border-white/70 bg-white/10 hover:bg-white/20 hover:border-white"
-                onClick={() => navigate("/courses")}
+                className="bg-amber-600/90 hover:bg-amber-700 text-white border-white/30 backdrop-blur-sm shadow-xl transition-all duration-300 px-8 py-4 text-lg font-medium rounded-full"
+                onClick={() => navigate("/auth")}
               >
                 <BookOpen className="h-5 w-5 mr-2" />
-                Browse Courses
+                {t('auth.login.submit')} - Educator
               </Button>
             </div>
 

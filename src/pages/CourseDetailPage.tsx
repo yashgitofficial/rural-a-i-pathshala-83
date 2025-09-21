@@ -7,10 +7,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, Play, FileText, Brain, CheckCircle, Clock, Users, Star, MessageCircle, Download } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ChatBot } from "@/components/ChatBot";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const CourseDetailPage = () => {
   const navigate = useNavigate();
   const { courseId } = useParams();
+  const { t } = useTranslation();
   const [showChatBot, setShowChatBot] = useState(false);
   const [currentLesson, setCurrentLesson] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState<{[key: number]: string}>({});
@@ -119,34 +122,35 @@ const CourseDetailPage = () => {
       {/* Header */}
       <header className="bg-gradient-hero text-white p-4 shadow-soft">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-4">
-            <Button variant="ghost" size="icon" onClick={() => navigate(-1)} className="text-white hover:bg-white/20">
-              <ArrowLeft className="h-5 w-5" />
-            </Button>
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" size="icon" onClick={() => navigate(-1)} className="text-white hover:bg-white/20">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+              <div className="flex items-center gap-3">
                 <span className="text-3xl">{course.image}</span>
                 <div>
                   <h1 className="text-2xl md:text-3xl font-bold">{course.title}</h1>
                   <p className="opacity-90">by {course.teacher}</p>
                 </div>
               </div>
-              
-              <div className="flex items-center gap-4 text-sm opacity-90">
-                <div className="flex items-center gap-1">
-                  <Users className="h-4 w-4" />
-                  {course.students} students
-                </div>
-                <div className="flex items-center gap-1">
-                  <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  {course.rating}
-                </div>
-                <Badge variant="secondary">{course.difficulty}</Badge>
-                <Badge variant="outline" className="text-white border-white/30">
-                  {course.level}
-                </Badge>
-              </div>
             </div>
+            <LanguageSwitcher />
+          </div>
+          
+          <div className="flex items-center gap-4 text-sm opacity-90 mb-4">
+            <div className="flex items-center gap-1">
+              <Users className="h-4 w-4" />
+              {course.students} students
+            </div>
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              {course.rating}
+            </div>
+            <Badge variant="secondary">{course.difficulty}</Badge>
+            <Badge variant="outline" className="text-white border-white/30">
+              {course.level}
+            </Badge>
           </div>
 
           {/* Progress */}
