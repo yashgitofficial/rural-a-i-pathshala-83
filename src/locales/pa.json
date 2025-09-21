@@ -1,0 +1,83 @@
+{
+  "common": {
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+    "error": "ਗਲਤੀ",
+    "success": "ਸਫਲਤਾ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "save": "ਸੇਵ ਕਰੋ",
+    "edit": "ਸੰਪਾਦਨ",
+    "delete": "ਮਿਟਾਓ",
+    "search": "ਖੋਜੋ",
+    "home": "ਮੁੱਖ ਪੰਨਾ",
+    "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "courses": "ਕੋਰਸ",
+    "profile": "ਪ੍ਰੋਫਾਈਲ",
+    "settings": "ਸੈਟਿੰਗਜ਼",
+    "logout": "ਲਾਗਆਉਟ",
+    "login": "ਲਾਗਇਨ",
+    "signup": "ਸਾਈਨ ਅੱਪ"
+  },
+  "nav": {
+    "home": "ਮੁੱਖ ਪੰਨਾ",
+    "courses": "ਕੋਰਸ",
+    "student_dashboard": "ਵਿਦਿਆਰਥੀ ਡੈਸ਼ਬੋਰਡ",
+    "teacher_dashboard": "ਅਧਿਆਪਕ ਡੈਸ਼ਬੋਰਡ",
+    "auth": "ਪ੍ਰਮਾਣੀਕਰਨ"
+  },
+  "hero": {
+    "title": "ਨਭਾ - ਪਿੰਡੀ ਸਿੱਖਿਆ ਪਲੇਟਫਾਰਮ",
+    "subtitle": "AI-ਸੰਚਾਲਿਤ ਸਿੱਖਿਆ ਦੁਆਰਾ ਪਿੰਡੀ ਸਿੱਖਿਆ ਨੂੰ ਸਸ਼ਕਤ ਬਣਾਉਣਾ",
+    "description": "ਪਿੰਡੀ ਭਾਈਚਾਰਿਆਂ ਲਈ ਤਿਆਰ ਕੀਤੀ ਗਈ ਸੱਭਿਆਚਾਰਕ ਤੌਰ 'ਤੇ ਢੁਕਵੀਂ, ਪਹੁੰਚਯੋਗ ਸਿੱਖਿਆ ਨਾਲ ਉਜਵਲ ਭਵਿੱਖ ਬਣਾਉਣ ਵਿੱਚ ਹਜ਼ਾਰਾਂ ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਅਧਿਆਪਕਾਂ ਨਾਲ ਜੁੜੋ।",
+    "get_started": "ਸ਼ੁਰੂ ਕਰੋ",
+    "learn_more": "ਹੋਰ ਜਾਣੋ"
+  },
+  "courses": {
+    "title": "ਉਪਲਬਧ ਕੋਰਸ",
+    "description": "ਸਾਡੇ ਵਿਆਪਕ ਕੋਰਸ ਕੈਟਲਾਗ ਦੀ ਖੋਜ ਕਰੋ",
+    "enroll": "ਹੁਣੇ ਦਾਖਲਾ ਲਓ",
+    "view_details": "ਵੇਰਵੇ ਵੇਖੋ",
+    "no_courses": "ਕੋਈ ਕੋਰਸ ਉਪਲਬਧ ਨਹੀਂ"
+  },
+  "dashboard": {
+    "welcome": "ਸਵਾਗਤ",
+    "student": {
+      "title": "ਵਿਦਿਆਰਥੀ ਡੈਸ਼ਬੋਰਡ",
+      "my_courses": "ਮੇਰੇ ਕੋਰਸ",
+      "progress": "ਪ੍ਰਗਤੀ",
+      "achievements": "ਪ੍ਰਾਪਤੀਆਂ"
+    },
+    "teacher": {
+      "title": "ਅਧਿਆਪਕ ਡੈਸ਼ਬੋਰਡ",
+      "my_classes": "ਮੇਰੀਆਂ ਕਲਾਸਾਂ",
+      "students": "ਵਿਦਿਆਰਥੀ",
+      "create_course": "ਕੋਰਸ ਬਣਾਓ"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਲਾਗਇਨ ਕਰੋ",
+      "email": "ਈਮੇਲ",
+      "password": "ਪਾਸਵਰਡ",
+      "submit": "ਸਾਈਨ ਇਨ",
+      "forgot_password": "ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?",
+      "no_account": "ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+      "signup_link": "ਇੱਥੇ ਸਾਈਨ ਅੱਪ ਕਰੋ"
+    },
+    "signup": {
+      "title": "ਨਵਾਂ ਖਾਤਾ ਬਣਾਓ",
+      "name": "ਪੂਰਾ ਨਾਮ",
+      "email": "ਈਮੇਲ",
+      "password": "ਪਾਸਵਰਡ",
+      "confirm_password": "ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+      "submit": "ਖਾਤਾ ਬਣਾਓ",
+      "have_account": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ?",
+      "login_link": "ਇੱਥੇ ਲਾਗਇਨ ਕਰੋ"
+    }
+  },
+  "language": {
+    "switch": "ਭਾਸ਼ਾ ਬਦਲੋ",
+    "english": "English",
+    "hindi": "हिंदी",
+    "punjabi": "ਪੰਜਾਬੀ"
+  }
+}

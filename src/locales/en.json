@@ -1,0 +1,83 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "student_dashboard": "Student Dashboard",
+    "teacher_dashboard": "Teacher Dashboard",
+    "auth": "Authentication"
+  },
+  "hero": {
+    "title": "नभा Nabha - Rural Learning Platform",
+    "subtitle": "Empowering rural education through AI-driven learning",
+    "description": "Join thousands of students and teachers in building a brighter future with culturally relevant, accessible education designed for rural communities.",
+    "get_started": "Get Started",
+    "learn_more": "Learn More"
+  },
+  "courses": {
+    "title": "Available Courses",
+    "description": "Explore our comprehensive course catalog",
+    "enroll": "Enroll Now",
+    "view_details": "View Details",
+    "no_courses": "No courses available"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "student": {
+      "title": "Student Dashboard",
+      "my_courses": "My Courses",
+      "progress": "Progress",
+      "achievements": "Achievements"
+    },
+    "teacher": {
+      "title": "Teacher Dashboard",
+      "my_classes": "My Classes",
+      "students": "Students",
+      "create_course": "Create Course"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login to Your Account",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgot_password": "Forgot Password?",
+      "no_account": "Don't have an account?",
+      "signup_link": "Sign up here"
+    },
+    "signup": {
+      "title": "Create New Account",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "submit": "Create Account",
+      "have_account": "Already have an account?",
+      "login_link": "Login here"
+    }
+  },
+  "language": {
+    "switch": "Switch Language",
+    "english": "English",
+    "hindi": "हिंदी",
+    "punjabi": "ਪੰਜਾਬੀ"
+  }
+}

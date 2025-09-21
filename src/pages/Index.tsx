@@ -3,10 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { TreePine, BookOpen, Users, Brain, Star, ArrowRight, Play, MessageCircle, Trophy, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroImage from "@/assets/hero-village-learning.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const features = [
     {
@@ -76,6 +79,11 @@ const Index = () => {
         />
         
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+          {/* Language Switcher */}
+          <div className="absolute top-4 right-4">
+            <LanguageSwitcher />
+          </div>
+          
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
             {/* Logo and Brand */}
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -85,18 +93,17 @@ const Index = () => {
                   नभा
                 </h1>
                 <p className="text-xl md:text-2xl opacity-90 font-medium">
-                  Rural Learning Platform
+                  {t('hero.title')}
                 </p>
               </div>
             </div>
 
             <h2 className="text-2xl md:text-4xl font-semibold mb-6">
-              Empowering Rural Education Through AI
+              {t('hero.subtitle')}
             </h2>
             
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Join thousands of students and teachers building a brighter future. 
-              Learn, grow, and succeed with culturally relevant education designed for rural communities.
+              {t('hero.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -107,7 +114,7 @@ const Index = () => {
                 className="shadow-glow"
               >
                 <Play className="h-5 w-5 mr-2" />
-                Start Learning Today
+                {t('hero.get_started')}
               </Button>
               <Button 
                 variant="outline" 
