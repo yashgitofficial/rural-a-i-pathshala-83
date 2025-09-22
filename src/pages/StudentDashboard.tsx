@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, Clock } from "lucide-react";
+import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, Clock, Home } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -63,9 +64,17 @@ const StudentDashboard = () => {
       {/* Header */}
       <header className="bg-gradient-hero text-white p-4 shadow-soft">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <TreePine className="h-8 w-8" />
-            <h1 className="text-2xl font-bold">नभा Nabha</h1>
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <Button variant="ghost" size="sm" className="text-white hover:bg-white/20 flex items-center gap-2">
+                <Home className="h-4 w-4" />
+                <span className="hidden sm:inline">{t('common.home')}</span>
+              </Button>
+            </Link>
+            <div className="flex items-center gap-3">
+              <TreePine className="h-8 w-8" />
+              <h1 className="text-2xl font-bold">नभा Nabha</h1>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden lg:block">
