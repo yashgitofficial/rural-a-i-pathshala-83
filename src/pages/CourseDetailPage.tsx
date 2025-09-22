@@ -9,6 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const CourseDetailPage = () => {
   const navigate = useNavigate();
@@ -135,7 +136,10 @@ const CourseDetailPage = () => {
                 </div>
               </div>
             </div>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
           </div>
           
           <div className="flex items-center gap-4 text-sm opacity-90 mb-4">

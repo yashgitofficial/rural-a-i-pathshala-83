@@ -15,7 +15,10 @@
     "settings": "ਸੈਟਿੰਗਜ਼",
     "logout": "ਲਾਗਆਉਟ",
     "login": "ਲਾਗਇਨ",
-    "signup": "ਸਾਈਨ ਅੱਪ"
+    "signup": "ਸਾਈਨ ਅੱਪ",
+    "darkMode": "ਡਾਰਕ ਮੋਡ",
+    "lightMode": "ਲਾਇਟ ਮੋਡ",
+    "toggleTheme": "ਥੀਮ ਬਦਲੋ"
   },
   "nav": {
     "home": "ਮੁੱਖ ਪੰਨਾ",

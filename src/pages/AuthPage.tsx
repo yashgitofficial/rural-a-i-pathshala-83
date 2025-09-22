@@ -8,6 +8,7 @@ import { BookOpen, Users, TreePine, ArrowLeft, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import heroImage from "@/assets/hero-village-learning.jpg";
 
 const AuthPage = () => {
@@ -34,7 +35,10 @@ const AuthPage = () => {
             <Home className="h-4 w-4 mr-2" />
             ← {t('nav.home')}
           </Button>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
         </div>
 
         <div className="flex-1 flex items-center justify-center">
@@ -105,7 +109,10 @@ const AuthPage = () => {
           <Home className="h-4 w-4 mr-2" />
           {t('nav.home')}
         </Button>
-        <LanguageSwitcher />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <LanguageSwitcher />
+        </div>
       </div>
 
       <div className="w-full max-w-md">

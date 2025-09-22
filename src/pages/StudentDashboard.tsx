@@ -8,6 +8,7 @@ import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, C
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const StudentDashboard = () => {
   const [showChatBot, setShowChatBot] = useState(false);
@@ -77,7 +78,8 @@ const StudentDashboard = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex lg:items-center lg:gap-2">
+              <ThemeToggle />
               <LanguageSwitcher />
             </div>
             <div className="text-right hidden sm:block">

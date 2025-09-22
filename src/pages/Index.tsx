@@ -5,6 +5,7 @@ import { TreePine, BookOpen, Users, Brain, Star, ArrowRight, Play, MessageCircle
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import heroImage from "@/assets/hero-village-learning.jpg";
 
 const Index = () => {
@@ -79,8 +80,9 @@ const Index = () => {
         />
         
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
-          {/* Language Switcher */}
-          <div className="absolute top-4 right-4">
+          {/* Language Switcher and Theme Toggle */}
+          <div className="absolute top-4 right-4 flex items-center gap-2">
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
           

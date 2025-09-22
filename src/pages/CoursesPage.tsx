@@ -8,6 +8,7 @@ import { BookOpen, Clock, Users, Star, Search, Filter, ArrowLeft, Play } from "l
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const CoursesPage = () => {
   const navigate = useNavigate();
@@ -155,7 +156,10 @@ const CoursesPage = () => {
                 <p className="opacity-90">Discover knowledge that empowers rural communities</p>
               </div>
             </div>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Search and Filters */}

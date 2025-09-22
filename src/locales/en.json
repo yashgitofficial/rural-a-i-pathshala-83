@@ -15,7 +15,10 @@
     "settings": "Settings",
     "logout": "Logout",
     "login": "Login",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "toggleTheme": "Toggle Theme"
   },
   "nav": {
     "home": "Home",
