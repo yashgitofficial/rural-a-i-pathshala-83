@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Send, Bot, User, Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 interface ChatBotProps {
   isOpen: boolean;
@@ -18,10 +20,11 @@ interface Message {
 }
 
 export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
+  const { t, i18n } = useTranslation();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "नमस्ते! Hi there! I'm your AI learning assistant. How can I help you today? 📚",
+      text: t('chatbot.welcome'),
       sender: "bot",
       timestamp: new Date()
     }
@@ -40,40 +43,48 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
   }, [messages]);
 
   const commonQuestions = [
-    "How do I join a course?",
-    "Explain photosynthesis",
-    "Help with mathematics",
-    "How to reset password?"
+    t('chatbot.questions.course'),
+    t('chatbot.questions.photosynthesis'),
+    t('chatbot.questions.mathematics'),
+    t('chatbot.questions.password')
   ];
 
   const generateBotResponse = (userMessage: string): string => {
     const lowerMessage = userMessage.toLowerCase();
     
-    if (lowerMessage.includes("course") || lowerMessage.includes("join")) {
-      return "To join a course, go to 'My Courses' and click 'Browse All Courses'. You can then select any course that interests you and click 'Start Learning'. All courses are free and designed for rural students! 🎓";
+    // Check for keywords in multiple languages
+    if (lowerMessage.includes("course") || lowerMessage.includes("join") || 
+        lowerMessage.includes("कोर्स") || lowerMessage.includes("कैसे") ||
+        lowerMessage.includes("ਕੋਰਸ") || lowerMessage.includes("ਕਿਵੇਂ")) {
+      return t('chatbot.responses.course');
     }
     
-    if (lowerMessage.includes("photosynthesis")) {
-      return "Photosynthesis is how plants make their own food! 🌱 Plants use sunlight, water, and carbon dioxide to create glucose (sugar) and oxygen. The green substance called chlorophyll helps capture sunlight. Remember: Sunlight + Water + CO₂ → Glucose + Oxygen. Would you like me to explain any part in more detail?";
+    if (lowerMessage.includes("photosynthesis") || lowerMessage.includes("प्रकाश संश्लेषण") ||
+        lowerMessage.includes("ਪ੍ਰਕਾਸ਼ ਸੰਸਲੇਸ਼ਣ")) {
+      return t('chatbot.responses.photosynthesis');
     }
     
-    if (lowerMessage.includes("math") || lowerMessage.includes("mathematics")) {
-      return "I'd love to help with mathematics! 🔢 What specific topic do you need help with? I can explain concepts in simple terms, provide examples, or help you practice problems. Popular topics include algebra, geometry, fractions, and word problems.";
+    if (lowerMessage.includes("math") || lowerMessage.includes("mathematics") ||
+        lowerMessage.includes("गणित") || lowerMessage.includes("ਗਣਿਤ")) {
+      return t('chatbot.responses.mathematics');
     }
     
-    if (lowerMessage.includes("password") || lowerMessage.includes("reset")) {
-      return "To reset your password: 1) Go to the login page 2) Click 'Forgot Password?' 3) Enter your email or phone number 4) Check your messages for a reset link. If you still have trouble, ask your teacher for help! 🔐";
+    if (lowerMessage.includes("password") || lowerMessage.includes("reset") ||
+        lowerMessage.includes("पासवर्ड") || lowerMessage.includes("ਪਾਸਵਰਡ")) {
+      return t('chatbot.responses.password');
     }
     
-    if (lowerMessage.includes("quiz") || lowerMessage.includes("test")) {
-      return "Quizzes are a great way to test your knowledge! 📝 You can find quizzes in each course or take quick practice quizzes from your dashboard. Don't worry about scores - they're for learning, not grading. You can retake them as many times as you want!";
+    if (lowerMessage.includes("quiz") || lowerMessage.includes("test") ||
+        lowerMessage.includes("प्रश्नावली") || lowerMessage.includes("ਕੁਇਜ਼")) {
+      return t('chatbot.responses.quiz');
     }
     
-    if (lowerMessage.includes("help") || lowerMessage.includes("support")) {
-      return "I'm here to help you succeed! 🤝 I can assist with course content, navigation, study tips, and technical questions. You can also reach out to your teachers through the platform. Remember, asking questions is how we learn best!";
+    if (lowerMessage.includes("help") || lowerMessage.includes("support") ||
+        lowerMessage.includes("मदद") || lowerMessage.includes("ਮਦਦ")) {
+      return t('chatbot.responses.help');
     }
     
-    return "That's a great question! 🤔 While I try to help with everything, I might not have all the answers. For specific course content, your teacher is the best resource. You can also try rephrasing your question or asking about: courses, quizzes, navigation, or study tips. What would you like to know?";
+    return t('chatbot.responses.default');
   };
 
   const handleSendMessage = () => {
@@ -126,9 +137,10 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
           <div className="flex items-center justify-between">
             <CardTitle className="flex items-center gap-2">
               <Bot className="h-5 w-5" />
-              AI Learning Assistant
+              {t('chatbot.title')}
             </CardTitle>
             <div className="flex items-center gap-2">
+              <LanguageSwitcher />
               <Button
                 variant="ghost"
                 size="icon"
@@ -203,7 +215,7 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
           {/* Quick Questions */}
           {messages.length === 1 && (
             <div className="p-4 border-t">
-              <p className="text-sm text-muted-foreground mb-2">Quick questions:</p>
+              <p className="text-sm text-muted-foreground mb-2">{t('chatbot.quickQuestions')}:</p>
               <div className="grid grid-cols-2 gap-2">
                 {commonQuestions.map((question, index) => (
                   <Button
@@ -226,7 +238,7 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
               <Input
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="Ask me anything about learning..."
+                placeholder={t('chatbot.inputPlaceholder')}
                 onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                 className="flex-1"
               />

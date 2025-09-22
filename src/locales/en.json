@@ -79,5 +79,26 @@
     "english": "English",
     "hindi": "हिंदी",
     "punjabi": "ਪੰਜਾਬੀ"
+  },
+  "chatbot": {
+    "title": "AI Learning Assistant",
+    "welcome": "Hi there! I'm your AI learning assistant. How can I help you today? 📚",
+    "quickQuestions": "Quick questions",
+    "inputPlaceholder": "Ask me anything about learning...",
+    "questions": {
+      "course": "How do I join a course?",
+      "photosynthesis": "Explain photosynthesis",
+      "mathematics": "Help with mathematics",
+      "password": "How to reset password?"
+    },
+    "responses": {
+      "course": "To join a course, go to 'My Courses' and click 'Browse All Courses'. You can then select any course that interests you and click 'Start Learning'. All courses are free and designed for rural students! 🎓",
+      "photosynthesis": "Photosynthesis is how plants make their own food! 🌱 Plants use sunlight, water, and carbon dioxide to create glucose (sugar) and oxygen. The green substance called chlorophyll helps capture sunlight. Remember: Sunlight + Water + CO₂ → Glucose + Oxygen. Would you like me to explain any part in more detail?",
+      "mathematics": "I'd love to help with mathematics! 🔢 What specific topic do you need help with? I can explain concepts in simple terms, provide examples, or help you practice problems. Popular topics include algebra, geometry, fractions, and word problems.",
+      "password": "To reset your password: 1) Go to the login page 2) Click 'Forgot Password?' 3) Enter your email or phone number 4) Check your messages for a reset link. If you still have trouble, ask your teacher for help! 🔐",
+      "quiz": "Quizzes are a great way to test your knowledge! 📝 You can find quizzes in each course or take quick practice quizzes from your dashboard. Don't worry about scores - they're for learning, not grading. You can retake them as many times as you want!",
+      "help": "I'm here to help you succeed! 🤝 I can assist with course content, navigation, study tips, and technical questions. You can also reach out to your teachers through the platform. Remember, asking questions is how we learn best!",
+      "default": "That's a great question! 🤔 While I try to help with everything, I might not have all the answers. For specific course content, your teacher is the best resource. You can also try rephrasing your question or asking about: courses, quizzes, navigation, or study tips. What would you like to know?"
+    }
   }
 }
