@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, Clock, Home } from "lucide-react";
+import { BookOpen, Brain, Trophy, MessageCircle, LogOut, TreePine, Play, Star, Clock, Home, Download } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -172,10 +172,16 @@ const StudentDashboard = () => {
                             {course.difficulty}
                           </Badge>
                         </div>
+                       </div>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm">
+                          <Download className="h-4 w-4 mr-2" />
+                          Download Notes
+                        </Button>
+                        <Button variant="hero" size="sm">
+                          Continue
+                        </Button>
                       </div>
-                      <Button variant="hero" size="sm">
-                        Continue
-                      </Button>
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-sm">
