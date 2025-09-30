@@ -3,15 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Users, BookOpen, BarChart3, Settings, LogOut, TreePine, MessageCircle, Plus, TrendingUp, Clock, CheckCircle } from "lucide-react";
+import { Users, BookOpen, BarChart3, Settings, LogOut, TreePine, MessageCircle, Plus, TrendingUp, Clock, CheckCircle, Home } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useNavigate } from "react-router-dom";
 
 const TeacherDashboard = () => {
   const [showChatBot, setShowChatBot] = useState(false);
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   const teacherData = {
     name: "Dr. Sunita Devi",
@@ -72,6 +74,14 @@ const TeacherDashboard = () => {
       <header className="bg-gradient-warm text-white p-4 shadow-soft">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigate("/")}
+              className="text-white hover:bg-white/20"
+            >
+              <Home className="h-5 w-5" />
+            </Button>
             <TreePine className="h-8 w-8" />
             <h1 className="text-2xl font-bold">नभा Nabha - {t('dashboard.teacher.title')}</h1>
           </div>
