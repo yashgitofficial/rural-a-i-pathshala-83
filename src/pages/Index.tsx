@@ -116,7 +116,7 @@ const Index = () => {
                 className="bg-blue-600/90 hover:bg-blue-700 text-white backdrop-blur-sm shadow-xl border border-white/20 transition-all duration-300 px-8 py-4 text-lg font-medium rounded-full"
               >
                 <Play className="h-5 w-5 mr-2" />
-                {t('auth.login.submit')} - Student
+                Start Learning
               </Button>
               <Button 
                 variant="outline" 
