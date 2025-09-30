@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Users, BookOpen, BarChart3, Settings, LogOut, TreePine, MessageCircle, Plus, TrendingUp, Clock, CheckCircle, Home } from "lucide-react";
+import { Users, BookOpen, BarChart3, Settings, LogOut, TreePine, MessageCircle, Plus, TrendingUp, Clock, CheckCircle, Home, Download } from "lucide-react";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -202,6 +202,10 @@ const TeacherDashboard = () => {
                         </div>
                       </div>
                       <div className="flex gap-2">
+                        <Button variant="outline" size="sm">
+                          <Download className="h-4 w-4 mr-2" />
+                          Download Notes
+                        </Button>
                         <Button variant="outline" size="sm">
                           View Details
                         </Button>
