@@ -92,7 +92,11 @@
       "course": "How do I join a course?",
       "photosynthesis": "Explain photosynthesis",
       "mathematics": "Help with mathematics",
-      "password": "How to reset password?"
+      "password": "How to reset password?",
+      "progress": "How to track my progress?",
+      "homework": "Where to find homework?",
+      "notes": "How to download notes?",
+      "study": "Give me study tips"
     },
     "responses": {
       "course": "To join a course, go to 'My Courses' and click 'Browse All Courses'. You can then select any course that interests you and click 'Start Learning'. All courses are free and designed for rural students! 🎓",
@@ -101,6 +105,10 @@
       "password": "To reset your password: 1) Go to the login page 2) Click 'Forgot Password?' 3) Enter your email or phone number 4) Check your messages for a reset link. If you still have trouble, ask your teacher for help! 🔐",
       "quiz": "Quizzes are a great way to test your knowledge! 📝 You can find quizzes in each course or take quick practice quizzes from your dashboard. Don't worry about scores - they're for learning, not grading. You can retake them as many times as you want!",
       "help": "I'm here to help you succeed! 🤝 I can assist with course content, navigation, study tips, and technical questions. You can also reach out to your teachers through the platform. Remember, asking questions is how we learn best!",
+      "progress": "You can track your progress from your dashboard! 📊 Each course shows a progress bar indicating how much you've completed. You'll also see your quiz scores, achievements, and learning streak. Keep learning every day to maintain your streak!",
+      "homework": "Homework assignments are available in each course section! 📚 Go to your enrolled course, and you'll find assignments under each lesson. Complete them at your own pace, and don't hesitate to ask your teacher or the AI assistant if you need help!",
+      "notes": "You can download notes for any lesson! 📄 Click the 'Download Notes' button next to each lesson in your courses. These notes are perfect for offline studying and revision. Save them on your device for easy access anytime!",
+      "study": "Here are some study tips: 📖 1) Study a little bit every day rather than cramming 2) Take breaks every 30-45 minutes 3) Practice with quizzes to test your understanding 4) Teach concepts to someone else - it helps you learn better 5) Use downloaded notes for offline revision. You've got this!",
       "default": "That's a great question! 🤔 While I try to help with everything, I might not have all the answers. For specific course content, your teacher is the best resource. You can also try rephrasing your question or asking about: courses, quizzes, navigation, or study tips. What would you like to know?"
     }
   }

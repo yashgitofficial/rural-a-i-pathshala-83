@@ -46,7 +46,11 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
     t('chatbot.questions.course'),
     t('chatbot.questions.photosynthesis'),
     t('chatbot.questions.mathematics'),
-    t('chatbot.questions.password')
+    t('chatbot.questions.password'),
+    t('chatbot.questions.progress'),
+    t('chatbot.questions.homework'),
+    t('chatbot.questions.notes'),
+    t('chatbot.questions.study')
   ];
 
   const generateBotResponse = (userMessage: string): string => {
@@ -82,6 +86,26 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
     if (lowerMessage.includes("help") || lowerMessage.includes("support") ||
         lowerMessage.includes("मदद") || lowerMessage.includes("ਮਦਦ")) {
       return t('chatbot.responses.help');
+    }
+    
+    if (lowerMessage.includes("progress") || lowerMessage.includes("track") ||
+        lowerMessage.includes("प्रगति") || lowerMessage.includes("ਤਰੱਕੀ")) {
+      return t('chatbot.responses.progress');
+    }
+    
+    if (lowerMessage.includes("homework") || lowerMessage.includes("assignment") ||
+        lowerMessage.includes("गृहकार्य") || lowerMessage.includes("ਹੋਮਵਰਕ")) {
+      return t('chatbot.responses.homework');
+    }
+    
+    if (lowerMessage.includes("notes") || lowerMessage.includes("download") ||
+        lowerMessage.includes("नोट्स") || lowerMessage.includes("ਨੋਟਸ")) {
+      return t('chatbot.responses.notes');
+    }
+    
+    if (lowerMessage.includes("study") || lowerMessage.includes("tips") ||
+        lowerMessage.includes("अध्ययन") || lowerMessage.includes("ਅਧਿਐਨ")) {
+      return t('chatbot.responses.study');
     }
     
     return t('chatbot.responses.default');
@@ -216,7 +240,7 @@ export const ChatBot = ({ isOpen, onClose }: ChatBotProps) => {
           {messages.length === 1 && (
             <div className="p-4 border-t">
               <p className="text-sm text-muted-foreground mb-2">{t('chatbot.quickQuestions')}:</p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 max-h-32 overflow-y-auto">
                 {commonQuestions.map((question, index) => (
                   <Button
                     key={index}
