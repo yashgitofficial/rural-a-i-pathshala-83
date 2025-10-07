@@ -203,10 +203,12 @@ const StudentDashboard = () => {
                   Browse All Courses
                 </Button>
               </Link>
-              <Button variant="sky" size="xl" className="h-20 flex-col">
-                <Brain className="h-6 w-6 mb-2" />
-                Take a Quick Quiz
-              </Button>
+              <Link to="/quick-quiz">
+                <Button variant="sky" size="xl" className="h-20 flex-col w-full">
+                  <Brain className="h-6 w-6 mb-2" />
+                  Take a Quick Quiz
+                </Button>
+              </Link>
             </div>
           </div>
 
