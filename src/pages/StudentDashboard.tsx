@@ -178,9 +178,11 @@ const StudentDashboard = () => {
                           <Download className="h-4 w-4 mr-2" />
                           Download Notes
                         </Button>
-                        <Button variant="hero" size="sm">
-                          Continue
-                        </Button>
+                        <Link to={`/lesson/${course.id}`}>
+                          <Button variant="hero" size="sm">
+                            Continue
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                     <div className="space-y-2">
