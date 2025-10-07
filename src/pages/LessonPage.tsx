@@ -1,32 +1,82 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Play, CheckCircle, Clock, BookOpen } from "lucide-react";
 
 const LessonPage = () => {
-  const lesson = {
-    title: "Algebra Basics",
-    course: "Mathematics - Class 8",
-    teacher: "Mr. Rajesh Kumar",
-    duration: "45 min",
-    difficulty: "Medium",
-    description: "Introduction to fundamental algebraic concepts including variables, expressions, and basic equations.",
-    topics: [
-      "Understanding variables and constants",
-      "Algebraic expressions and terms",
-      "Simplifying expressions",
-      "Introduction to equations",
-      "Solving simple linear equations"
-    ],
-    learningOutcomes: [
-      "Identify and work with algebraic variables",
-      "Write and simplify algebraic expressions",
-      "Understand the concept of equations",
-      "Solve basic linear equations step by step",
-      "Apply algebraic thinking to real-world problems"
-    ]
+  const { lessonId } = useParams();
+
+  const lessonsData: Record<string, any> = {
+    "1": {
+      title: "Algebra Basics",
+      course: "Mathematics - Class 8",
+      teacher: "Mr. Rajesh Kumar",
+      duration: "45 min",
+      difficulty: "Medium",
+      description: "Introduction to fundamental algebraic concepts including variables, expressions, and basic equations.",
+      topics: [
+        "Understanding variables and constants",
+        "Algebraic expressions and terms",
+        "Simplifying expressions",
+        "Introduction to equations",
+        "Solving simple linear equations"
+      ],
+      learningOutcomes: [
+        "Identify and work with algebraic variables",
+        "Write and simplify algebraic expressions",
+        "Understand the concept of equations",
+        "Solve basic linear equations step by step",
+        "Apply algebraic thinking to real-world problems"
+      ]
+    },
+    "2": {
+      title: "Plant Structure",
+      course: "Science - Biology",
+      teacher: "Ms. Sunita Devi",
+      duration: "30 min",
+      difficulty: "Easy",
+      description: "Explore the fundamental structure of plants, including roots, stems, leaves, and their functions.",
+      topics: [
+        "Parts of a plant and their functions",
+        "Root systems and types",
+        "Stem structure and functions",
+        "Leaf anatomy and photosynthesis",
+        "Plant tissue types"
+      ],
+      learningOutcomes: [
+        "Identify different parts of a plant",
+        "Understand the function of roots, stems, and leaves",
+        "Explain the process of photosynthesis",
+        "Differentiate between types of root systems",
+        "Recognize various plant tissues"
+      ]
+    },
+    "3": {
+      title: "Poetry Analysis",
+      course: "Hindi Literature",
+      teacher: "Mr. Ashok Pandey",
+      duration: "35 min",
+      difficulty: "Medium",
+      description: "Learn to analyze and appreciate Hindi poetry through various literary devices and techniques.",
+      topics: [
+        "Understanding poetic devices (अलंकार)",
+        "Rhythm and meter (छंद)",
+        "Theme and meaning interpretation",
+        "Poet's perspective and context",
+        "Emotional expression in poetry"
+      ],
+      learningOutcomes: [
+        "Identify poetic devices in Hindi poems",
+        "Analyze the theme and meaning of poems",
+        "Understand the poet's perspective",
+        "Appreciate rhythmic patterns",
+        "Express emotional interpretation of poetry"
+      ]
+    }
   };
+
+  const lesson = lessonsData[lessonId || "1"] || lessonsData["1"];
 
   return (
     <div className="min-h-screen bg-background">
