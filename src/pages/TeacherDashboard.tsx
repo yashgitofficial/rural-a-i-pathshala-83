@@ -277,7 +277,11 @@ const TeacherDashboard = () => {
                 <CardTitle>Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="village" className="w-full justify-start">
+                <Button 
+                  variant="village" 
+                  className="w-full justify-start"
+                  onClick={() => navigate("/assignments")}
+                >
                   <BookOpen className="h-4 w-4 mr-2" />
                   Create Assignment
                 </Button>

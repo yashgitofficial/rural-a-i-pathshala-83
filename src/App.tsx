@@ -10,6 +10,7 @@ import ClassSelectionPage from "./pages/ClassSelectionPage";
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import AnalyticsPage from "./pages/AnalyticsPage";
+import AssignmentsPage from "./pages/AssignmentsPage";
 import CoursesPage from "./pages/CoursesPage";
 import CourseDetailPage from "./pages/CourseDetailPage";
 import QuickQuizPage from "./pages/QuickQuizPage";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/student-dashboard" element={<StudentDashboard />} />
           <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/assignments" element={<AssignmentsPage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/course/:courseId" element={<CourseDetailPage />} />
           <Route path="/quick-quiz" element={<QuickQuizPage />} />
