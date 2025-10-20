@@ -19,7 +19,7 @@ const AuthPage = () => {
 
   const handleLogin = (role: "student" | "teacher") => {
     // In a real app, this would validate credentials
-    navigate(role === "student" ? "/student-dashboard" : "/teacher-dashboard");
+    navigate(role === "student" ? "/class-selection" : "/teacher-dashboard");
   };
 
   if (!userRole) {

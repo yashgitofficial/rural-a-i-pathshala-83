@@ -83,6 +83,13 @@
     "hindi": "हिंदी",
     "punjabi": "ਪੰਜਾਬੀ"
   },
+  "classSelection": {
+    "title": "Select Your Class",
+    "description": "Choose your current class to get personalized learning content",
+    "class": "Class",
+    "grade": "Grade",
+    "note": "You can change your class anytime from settings"
+  },
   "chatbot": {
     "title": "AI Learning Assistant",
     "welcome": "Hi there! I'm your AI learning assistant. How can I help you today? 📚",
