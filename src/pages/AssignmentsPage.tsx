@@ -9,16 +9,16 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { useToast } from "@/hooks/use-toast";
 import { 
   ArrowLeft, 
-  Plus, 
-  FileText, 
-  Calendar, 
-  Users,
+  BookOpen,
+  Calendar,
   CheckCircle,
   Clock,
   AlertCircle,
   Edit,
+  FileText, 
+  Plus, 
   Trash2,
-  BookOpen
+  Users
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
