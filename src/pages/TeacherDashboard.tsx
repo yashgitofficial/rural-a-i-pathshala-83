@@ -281,7 +281,11 @@ const TeacherDashboard = () => {
                   <BookOpen className="h-4 w-4 mr-2" />
                   Create Assignment
                 </Button>
-                <Button variant="sky" className="w-full justify-start">
+                <Button 
+                  variant="sky" 
+                  className="w-full justify-start"
+                  onClick={() => navigate("/analytics")}
+                >
                   <BarChart3 className="h-4 w-4 mr-2" />
                   View Analytics
                 </Button>
